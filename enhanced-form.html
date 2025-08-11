@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLP Assignment</title>
+</head>
+<body>
+    <header>
+        <h1>Form Demonstration</h1>
+        <p>This page shows proper use of HTML5 semantic elements, lists, tables, media, and an accessible form with validation tought by Eddy.</p>
+    </header>
+
+    <section>
+        <h2>Content Listing</h2>
+        
+        <article>
+            <h3>Ordered List of Steps</h3>
+            <ol>
+                <li>Review the form requirements</li>
+                <li>Complete all required fields</li>
+                <li>Verify your information</li>
+                <li>Submit the form</li>
+                <li>Wait for confirmation</li>
+            </ol>
+        </article>
+
+        <h2>Nested Lists</h2>
+        <ol>
+            <li>Frontend Languages</li>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+
+            </ul>
+            
+        </ol>
+
+        <article>
+            <h3>Unordered List of Features</h3>
+            <ul>
+                <li>Webdev Monday</li>
+                <li>Python Tuesday</li>
+                <li>Vibes Wednesday</li>
+                <li>SQL Thursday</li>
+                <li>Well-organized content</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Sample Data Table</h3>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <caption>User Statistics Overview</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Active Users</th>
+                        <th scope="col">New Signups</th>
+                        <th scope="col">Completion Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Desktop</th>
+                        <td>1,250</td>
+                        <td>320</td>
+                        <td>78%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mobile</th>
+                        <td>2,890</td>
+                        <td>740</td>
+                        <td>65%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tablet</th>
+                        <td>450</td>
+                        <td>120</td>
+                        <td>72%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td>4,590</td>
+                        <td>1,180</td>
+                        <td>70%</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+        <article>
+            <h3>Media Examples</h3>
+            <figure>
+                <img src="https://images.pexels.com/photos/8303176/pexels-photo-8303176.png" width="300" height="200"="Sample placeholder image demonstrating form layout">
+                <figcaption>Figure 1: Samuel Designs</figcaption>
+            </figure>
+            
+            <audio controls>
+  <source src="Martha Mwaipaja - Mambo Yamebadilika (Official Music Video) [I4tRnn6QgAE].mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+            </audio>
+             <figcaption>Audio 1 : Mambo yamebadilika-Mwaipaja</figcaption>
+            <br><br>  
+
+            <video controls width="800" poster="https://via.placeholder.com/800x450?text=Video+Thumbnail">
+                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                <track kind="captions" src="sample.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <p>The beauty of Nature and Technology features</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Detail Field Form</h2>
+        <form id="userRegistration" novalidate>
+            <fieldset>
+                <legend>Personal Information <span>(required)</span></legend>
+                
+                <div>
+                    <label for="fullname">Full Name <span>(required)</span></label>
+                    <input type="text" id="fullname" name="fullname" required minlength="3" 
+                           placeholder="Enter your full name" autocomplete="name">
+                </div>
+                
+                <div>
+                    <label for="email">Email Address <span>(required)</span></label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="your.email@example.com" autocomplete="email">
+                </div>
+                
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" 
+                           placeholder="2547-1772-9745" pattern="[0-9]{4}-[0-9]{4}-[0-9]{3}"
+                           autocomplete="tel">
+                    <small>Format: 1231-4564-7890</small>
+                </div>
+                
+                <div>
+                    <label for="dob">Date of Birth <span>(required)</span></label>
+                    <input type="date" id="dob" name="dob" required 
+                           min="1900-01-01" max="2027-01-01">
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit">Submit Registration</button>
+            </div>
+
+               <fieldset>
+      <legend>Your Message</legend>
+
+      <label for="subject">Subject:</label><br>
+      <input type="text" id="subject" name="subject" placeholder="Subject" required minlength="3"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="30" placeholder="Type your message here..." required></textarea><br><br>
+    </fieldset>
+
+    <button type="submit">Send</button>
+     <address>
+            Contact: <a href="Samuel:samuellugallah7@gmail.com">samuellugallah7@gmail.com</a>
+        </address>
+          <fieldset>
+      <legend>Your Contact Info</legend>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" value="samuellugallah7@gmail.com" readonly><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" value="0717729745" readonly><br><br>
+    </fieldset>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 PLP AFRICA. Samuel Lugallah.</p>
+    </footer>
+</body>
+
+</html>
